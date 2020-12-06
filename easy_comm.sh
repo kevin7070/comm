@@ -71,3 +71,13 @@ DSP CELL
 DSP OMCH
 DSP CELLUECNT
 DSP NRCELLUENUMBER
+
+# Command to check and modify L9 power:
+# Checking the ADJS, ADJI & 3G nbr
+LST EUTRANINTRAFREQNCELL:;
+LST EUTRANINTERFREQNCELL:;
+LST UTRANNCELL:;
+	
+# Modify the reference signal power
+LST PDSCHCFG:;
+MOD PDSCHCFG:LOCALCELLID=<local cell id>,REFERENCESIGNALPWR=<xxx>;
